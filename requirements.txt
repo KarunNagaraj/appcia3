@@ -1,0 +1,8 @@
+streamlit
+requests
+nltk
+opencv-python
+numpy
+pandas
+matplotlib
+newsapi-python
