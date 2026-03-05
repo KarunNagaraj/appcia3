@@ -14,6 +14,11 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+nltk.download("vader_lexicon", quiet=True)
+nltk.download("stopwords", quiet=True)
+nltk.download("punkt", quiet=True)
+nltk.download("punkt_tab", quiet=True)
+
 st.title("News Visual Intelligence")
 
 sia = SentimentIntensityAnalyzer()
@@ -24,7 +29,7 @@ st.write("Article Source")
 
 input_method = st.radio(
     "How would you like to provide the article?",
-    ["Enter article URL", "Upload .txt file", "Paste text"],
+    ["Paste text", "Upload .txt file", "Enter article URL"],
     horizontal=True
 )
 
@@ -39,7 +44,7 @@ elif input_method == "Upload .txt file":
         text_content = uploaded_text_file.read().decode("utf-8")
 
 elif input_method == "Enter article URL":
-    url_input = st.text_input("Paste the news article URL here: (Works best with sites like NDTV, TOI, IndiaToday, TheHindu, etc.)")
+    url_input = st.text_input("Paste the news article URL here:")
     if url_input:
         try:
             from newspaper import Article
