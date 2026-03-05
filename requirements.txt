@@ -1,6 +1,6 @@
 streamlit
 nltk
-opencv-python
+opencv-python-headless
 numpy
 pandas
 newspaper3k
