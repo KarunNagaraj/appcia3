@@ -1,8 +1,7 @@
 streamlit
-requests
 nltk
 opencv-python
 numpy
 pandas
-matplotlib
-newsapi-python
+newspaper3k
+lxml_html_clean
