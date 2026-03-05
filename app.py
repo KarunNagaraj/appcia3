@@ -29,7 +29,7 @@ st.write("Article Source")
 
 input_method = st.radio(
     "How would you like to provide the article?",
-    ["Paste text", "Upload .txt file", "Enter article URL"],
+    ["Enter article URL", "Paste text", "Upload .txt file"],
     horizontal=True
 )
 
